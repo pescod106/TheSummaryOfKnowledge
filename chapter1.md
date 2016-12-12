@@ -24,5 +24,23 @@
 
 ![](/assets/import3.png)
 
+## 个人信息界面
 
+## Request
+
+### Headers
+
+![](/assets/import4.png)
+
+## Response
+
+### JOSN
+
+Profile
+
+![](/assets/import5.png)
+
+AdditionInfo
+
+![](/assets/import6.png)
 
