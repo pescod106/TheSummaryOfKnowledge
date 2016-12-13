@@ -171,19 +171,18 @@ public String getImei()
 
 B：/com/yongqianbao/credit/TinkerApplicationLike.class
 
-**public** String getAndroidId\(\)
+```
+public String getAndroidId()
+  {
+    if (TextUtils.isEmpty(this.androidId)) {
+      this.androidId = m.c(getApplication());
+    }
+    return this.androidId;
+  }
+```
 
- {
-
-**if** \(TextUtils.isEmpty\(**this**.androidId\)\) {
-
-**this**.androidId = m.c\(getApplication\(\)\);
-
- }
-
-**returnthis**.androidId;
-
- }
+  
+Channel
 
 ## Response
 
