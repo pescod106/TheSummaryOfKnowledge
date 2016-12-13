@@ -113,6 +113,78 @@ public static String b(Context paramContext)
 
 Sign：
 
+SessionID：
+
+SystemInfo：/com/yongqianbao/credit/TinkerApplicationLike.class
+
+```
+public String getSystemInfo()
+  {
+    if (this.systemInfo == null)
+    {
+      String[] arrayOfString = new String[1];
+      arrayOfString[0] = com.yongqianbao.credit.utils.c.d(this.context);
+      this.systemInfo = h.a(arrayOfString);
+    }
+    return this.systemInfo;
+  }
+```
+
+Wid：/com/yongqianbao/credit/TinkerApplicationLike.class
+
+```java
+public String getWid()
+  {
+    if ((!TextUtils.isEmpty(this.wid)) || (TextUtils.isEmpty(j.a()))) {}
+    for (;;)
+    {
+      try
+      {
+        this.wid = h.a(getSystemInfo() + System.currentTimeMillis());
+        j.a(this.wid);
+        return this.wid;
+      }
+      catch (NoSuchAlgorithmException localNoSuchAlgorithmException)
+      {
+        localNoSuchAlgorithmException.printStackTrace();
+        continue;
+      }
+      this.wid = j.a();
+    }
+  }
+```
+
+A：/com/yongqianbao/credit/TinkerApplicationLike.class
+
+```java
+public String getImei()
+  {
+    if (TextUtils.isEmpty(this.imei)) {
+      this.imei = com.yongqianbao.credit.utils.c.d(getApplication());
+    }
+    if (TextUtils.isEmpty(this.imei)) {
+      return "";
+    }
+    return this.imei;
+  }
+```
+
+B：/com/yongqianbao/credit/TinkerApplicationLike.class
+
+**public** String getAndroidId\(\)
+
+ {
+
+**if** \(TextUtils.isEmpty\(**this**.androidId\)\) {
+
+**this**.androidId = m.c\(getApplication\(\)\);
+
+ }
+
+**returnthis**.androidId;
+
+ }
+
 ## Response
 
 ### json
