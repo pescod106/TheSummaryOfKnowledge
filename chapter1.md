@@ -111,7 +111,7 @@ public static String b(Context paramContext)
   }
 ```
 
-Sign：
+Sign：组成：加密（“Phone=”+手机号）
 
 SessionID：
 
