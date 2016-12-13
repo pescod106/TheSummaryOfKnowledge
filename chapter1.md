@@ -154,7 +154,9 @@ public String getWid()
   }
 ```
 
-A：/com/yongqianbao/credit/TinkerApplicationLike.class
+A：获取的是手机的IMEI值
+
+/com/yongqianbao/credit/TinkerApplicationLike.class
 
 ```java
 public String getImei()
@@ -169,7 +171,9 @@ public String getImei()
   }
 ```
 
-B：/com/yongqianbao/credit/TinkerApplicationLike.class
+B：获取的是设备ID（DEVICE\_ID）
+
+/com/yongqianbao/credit/TinkerApplicationLike.class
 
 ```
 public String getAndroidId()
@@ -181,7 +185,6 @@ public String getAndroidId()
   }
 ```
 
-  
 Channel
 
 ## Response
