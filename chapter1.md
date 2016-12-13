@@ -111,7 +111,59 @@ public static String b(Context paramContext)
   }
 ```
 
-Sign：组成：加密（“Phone=”+手机号）
+Sign：组成：加密（“Phone=”+手机号）------/com/yongqianbao/credit/d/a/a.class
+
+```java
+public static m a(String paramString1, String paramString2)
+    throws JSONException, IOException, ServerFailedException
+  {
+    String str1 = f.a(paramString2);
+    for (;;)
+    {
+      JSONObject localJSONObject;
+      synchronized (a)
+      {
+        a.clear();
+        a.put("Phone", paramString1);
+        a.put("Password", str1);
+        String str2 = com.yongqianbao.credit.common.a.q;
+        Map localMap2 = a;
+        String[] arrayOfString = new String[1];
+        arrayOfString[0] = ("Phone=" + paramString1);
+        /*
+        *************************下面一行是重点
+        */
+        localJSONObject = com.yongqianbao.credit.common.b.a(str2, localMap2, "/login", h.a(arrayOfString));
+        
+    }
+  }
+  h.a(arrayOfString))返回   加密（“Phone=”+手机号）
+//加密算法如下
+public static final String a(String paramString)
+    throws NoSuchAlgorithmException
+  {
+    int i = 0;
+    String str = "pILfaLRVfXhIArlpaVq5OBRzFXutWAT1ipmMe1FzZz0" + paramString;
+    char[] arrayOfChar1 = { 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 97, 98, 99, 100, 101, 102 };
+    byte[] arrayOfByte1 = str.getBytes();
+    MessageDigest localMessageDigest = MessageDigest.getInstance("MD5");
+    localMessageDigest.update(arrayOfByte1);
+    byte[] arrayOfByte2 = localMessageDigest.digest();
+    int j = arrayOfByte2.length;
+    char[] arrayOfChar2 = new char[j * 2];
+    int k = 0;
+    while (i < j)
+    {
+      int m = arrayOfByte2[i];
+      int n = k + 1;
+      arrayOfChar2[k] = arrayOfChar1[(0xF & m >>> 4)];
+      k = n + 1;
+      arrayOfChar2[n] = arrayOfChar1[(m & 0xF)];
+      i++;
+    }
+    return new String(arrayOfChar2);
+  }
+```
 
 SessionID：
 
